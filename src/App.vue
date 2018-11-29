@@ -11,11 +11,19 @@
           </div>
           <div id="navbarBasicExample" class="navbar-menu">
               <div class="navbar-start">
-                  <router-link class="navbar-item" to="/">Home</router-link>
-                  <router-link class="navbar-item" to="/about">About</router-link>
+                  <a class="navbar-item" href="https://www.linkedin.com/in/wouerner/">Linkedin</a>
               </div>
           </div>
       </nav>
         <router-view/>
   </div>
 </template>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+#app {
+    font-family: 'Varela Round', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+</style>

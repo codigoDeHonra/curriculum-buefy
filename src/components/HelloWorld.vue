@@ -1,46 +1,75 @@
 <template>
     <div>
-    <section class="hero">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title">
-                    Wouerner Brandão
-                </h1>
-                <h2 class="subtitle">
-                   Programador 
-                </h2>
-                <p>Oi, meu nome é <strong>Wouerner Brandão</strong>, nascido em 27 de Novembro de 1989, casado com Tereza Cristina, brasiliense, morador do <a target="blank" href="https://www.google.com.br/maps/@-15.9250398,-48.0989367,14z">Recanto das Emas – DF</a>, bacharel em Sistemas de informação pela <a href="http://udf.edu.br/">UDF</a> no ano de 2012.</p>
-                <p>Busco oportunidade na área de desenvolvimento web, trabalho como desenvolvedor desde 2010.</p>
-                <p>Atualmente estou me  capacitando como profissional em outras linguagens de programação, como: Ruby, Python e Javascript.</p>
-                <p>Contatos: <a href="tel:+5561999179736">61-99917-9736</a> e o e-mail <a href="mailto:wouerner@gmail.com">wouerner@gmail.com</a></p>
-                <p>Curriculo em <a href="wouerner.pdf">PDF</a>.</p>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <div class="card">
-                        <header class="card-header">
-                            <p class="card-header-title">
-                               Contatos
-                            </p>
-                            <a href="#" class="card-header-icon" aria-label="more options">
-                                <span class="icon">
-                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                        </header>
-                        <div class="card-content">
-                            <p>Telefone: <a href="tel:+5561999179736">61-99917-9736</a></p>
-                            <p>E-mail: <a href="mailto:wouerner@protonmail.com">wouerner@protonmail.com</a></p>
-                            <p><a href="https://www.linkedin.com/in/wouerner/">Linkedin</a></p>
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container">
+
+                    <div class="level">
+                        <div class="level-rifgt">
+                            <div class="level-item">
+                                <img src="../assets/acher_amp_x300.png"/>
+                            </div>
+                        </div>
+                        <div class="level-left">
+                            <div class="level-item is-clearfix">
+                                <h1 class="title is-clearfix">
+                                    Wouerner Brandão
+                                </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-
+        </section>
+    <section>
+        <div class="container">
+            <b-collapse class="card"
+                :open="false"
+            >
+                <div slot="trigger" slot-scope="props" class="card-header">
+                    <p class="card-header-title">
+                       Bio
+                    </p>
+                <a class="card-header-icon">
+                    <b-icon
+                        :icon="props.open ? 'menu-down' : 'menu-up'">
+                    </b-icon>
+                </a>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Oi, meu nome é <strong>Wouerner Brandão</strong>, nascido em 27 de Novembro de 1989, casado com Tereza Cristina, brasiliense, morador do <a target="blank" href="https://www.google.com.br/maps/@-15.9250398,-48.0989367,14z">Recanto das Emas – DF</a>, bacharel em Sistemas de informação pela <a href="http://udf.edu.br/">UDF</a> no ano de 2012.</p>
+                        <p>Busco oportunidade na área de desenvolvimento web, trabalho como desenvolvedor desde 2010.</p>
+                        <p>Atualmente estou me  capacitando como profissional em outras linguagens de programação, como: Ruby, Python e Javascript.</p>
+                        <p>Contatos: <a href="tel:+5561999179736">61-99917-9736</a> e o e-mail <a href="mailto:wouerner@gmail.com">wouerner@gmail.com</a></p>
+                        <a href="wouerner.pdf" class="button ">
+                            <b-icon icon="file-pdf"></b-icon>
+                            <span>Curriculo</span>
+                        </a>
+                    </div>
+                </div>
+            </b-collapse>
+            <b-collapse class="card"
+                :open="false"
+            >
+                <div slot="trigger" slot-scope="props" class="card-header">
+                    <p class="card-header-title">
+                      Contatos
+                    </p>
+                    <a class="card-header-icon">
+                        <b-icon
+                            :icon="props.open ? 'menu-down' : 'menu-up'">
+                        </b-icon>
+                    </a>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <p>Telefone: <a href="tel:+5561999179736">61-99917-9736</a></p>
+                        <p>E-mail: <a href="mailto:wouerner@protonmail.com">wouerner@protonmail.com</a></p>
+                        <p><a href="https://www.linkedin.com/in/wouerner/">Linkedin</a></p>
+                    </div>
+                </div>
+            </b-collapse>
             <p class="subtitle is-2">Experiência</p>
             <div
                 v-for="(col, index) in chunk(empregos)"
@@ -62,38 +91,18 @@
             </div>
 
             <p class="subtitle is-2"> Tecnologias</p>
-            <p class="subtitle is-3"> Front-end Web</p>
-            <div class="tags are-medium">
-                <span class="tag is-info is-large">Javascript</span>
-                <span class="tag is-info is-large">CSS</span>
-                <span class="tag is-info is-large">Bootstrap</span>
-                <span class="tag is-info is-large">Fundation</span>
-                <span class="tag is-info is-large">Bulma</span>
-                <span class="tag is-info is-large">jQuery</span>
-                <span class="tag is-info is-large">Angular</span>
-                <span class="tag is-info is-large">Vue.js</span>
-            </div>
-            <p class="subtitle is-3"> Back-end Web</p>
-            <div class="tags are-medium">
-                <span class="tag is-info is-large">PHP</span>
-                <span class="tag is-info is-large">Laravel</span>
-                <span class="tag is-info is-large">Zend</span>
-                <span class="tag is-info is-large">Symfony</span>
-                <span class="tag is-info is-large">CodeIgniter</span>
-                <span class="tag is-info is-large">NodeJS</span>
-                <span class="tag is-info is-large">Ruby</span>
-                <span class="tag is-info is-large">Python</span>
-                <span class="tag is-info is-large">Vue.js</span>
-            </div>
-            <p class="subtitle is-3">Banco de dados </p>
-            <div class="tags are-medium">
-                <span class="tag is-info is-large">Sql Server</span>
-                <span class="tag is-info is-large">PostgreSQL</span>
-                <span class="tag is-info is-large">MySQL</span>
-                <span class="tag is-info is-large">Oracle</span>
-                <span class="tag is-info is-large">Sqlite</span>
-                <span class="tag is-info is-large">MongoDB</span>
-            </div>
+            <template v-for="(skill, index) in skills" >
+                <p :key="'p_' + index" class="subtitle is-3"> {{skill.title}}</p>
+                <div :key="'d_' + index" class="tags are-medium">
+                    <span
+                        v-for="(tech, i) in skill.techs"
+                        :key="i"
+                        class="tag is-info is-large"
+                    >
+                        {{tech}}
+                    </span>
+                </div>
+            </template>
             <p class="subtitle is-2">Formação</p>
             <p>
                 Bacharel pelo Centro Universitário UDF em Sistemas de Informação no ano de 2012
@@ -126,7 +135,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Curriculum',
     data() {
         return {
             isComponentModalActive: false,
@@ -170,6 +179,38 @@ export default {
                         background: 'has-background-info',
                     }
                 },
+            ],
+            skills:[
+                { title: 'Front-end Web', techs: [
+                    'Javascript',
+                    'CSS',
+                    'Bootstrap',
+                    'Fundation',
+                    'Bulma',
+                    'jQuery',
+                    'Angular',
+                    'Vue.js'
+                ]},
+                {
+                    title: 'Backend Web', techs: [
+                    'PHP',
+                    'Laravel',
+                    'Zend',
+                    'Symfony',
+                    'CodeIgniter',
+                    'NodeJS',
+                    'Ruby',
+                    'Python'
+                ]},
+                {
+                    title: 'Banco de dados', techs: [
+                    'Sql Server',
+                    'PostgreSQL',
+                    'MySQL',
+                    'Oracle',
+                    'Sqlite',
+                    'MongoDB'
+                ]}
             ]
         }
     },
@@ -187,11 +228,9 @@ export default {
                 chunked_arr.push(copied.splice(0, size));
             }
             return chunked_arr;
-
         }
   },
     mounted(){
-        console.log(this.chunk());
     }
 }
 </script>
