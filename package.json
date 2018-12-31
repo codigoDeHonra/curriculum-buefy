@@ -11,26 +11,30 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.5.0",
-    "buefy": "^0.7.0",
+    "@fortawesome/fontawesome-free": "^5.6.3",
+    "buefy": "^0.7.1",
     "register-service-worker": "^1.0.0",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.5",
-    "@vue/cli-plugin-e2e-cypress": "^3.0.5",
-    "@vue/cli-plugin-eslint": "^3.0.5",
-    "@vue/cli-plugin-pwa": "^3.0.5",
-    "@vue/cli-plugin-unit-mocha": "^3.0.5",
-    "@vue/cli-service": "^3.0.5",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/cli-plugin-babel": "^3.2.2",
+    "@vue/cli-plugin-e2e-cypress": "^3.2.2",
+    "@vue/cli-plugin-eslint": "^3.2.2",
+    "@vue/cli-plugin-pwa": "^3.2.2",
+    "@vue/cli-plugin-unit-mocha": "^3.2.2",
+    "@vue/cli-service": "^3.2.2",
+    "@vue/test-utils": "^1.0.0-beta.28",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
+    "eslint": "^5.11.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.2",
     "vue-gh-pages": "^1.19.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.21",
+    "webpack": "^4.26.1"
   }
 }

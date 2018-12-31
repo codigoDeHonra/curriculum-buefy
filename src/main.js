@@ -7,7 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/css/fontawesome.css";
 
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
+// import 'buefy/dist/buefy.css'
 
 Vue.use(Buefy,
 {

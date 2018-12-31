@@ -20,8 +20,40 @@
         <router-view/>
   </div>
 </template>
-<style>
+<style lang="scss">
+@import "~bulma/sass/utilities/_all";
+
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+// Set your colors
+$primary:#706fd3;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+
+$dark: #2e3131;
+
+$primary-invert: findColorInvert($primary);
+$grey-darker-invert: $white;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
 
 #app {
     font-family: 'Varela Round', Helvetica, Arial, sans-serif;
@@ -31,4 +63,7 @@
     color: white ;
 }
 
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
 </style>
