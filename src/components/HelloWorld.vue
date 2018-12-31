@@ -12,7 +12,7 @@
                         </div>
                         <div class="level-left">
                             <div class="level-item is-clearfix">
-                                <h1 class="title is-clearfix">
+                                <h1 class="title is-clearfix has-text-white">
                                     Wouerner Brandão
                                 </h1>
                             </div>
@@ -30,11 +30,11 @@
                     <p class="card-header-title">
                        Bio
                     </p>
-                <a class="card-header-icon">
-                    <b-icon
-                        :icon="props.open ? 'menu-down' : 'menu-up'">
-                    </b-icon>
-                </a>
+                    <a class="card-header-icon has-text-black">
+                        <b-icon
+                            :icon="props.open ? 'menu-down' : 'menu-up'">
+                        </b-icon>
+                    </a>
                 </div>
                 <div class="card-content">
                     <div class="content">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </b-collapse>
-            <p class="subtitle is-2">Experiência</p>
+            <p class="subtitle has-text-white is-2">Experiência</p>
             <div
                 v-for="(col, index) in chunk(empregos)"
                 :key="index"
@@ -90,9 +90,9 @@
                </div>
             </div>
 
-            <p class="subtitle is-2"> Tecnologias</p>
+            <p class="subtitle has-text-white is-2"> Tecnologias</p>
             <template v-for="(skill, index) in skills" >
-                <p :key="'p_' + index" class="subtitle is-3"> {{skill.title}}</p>
+                <p :key="'p_' + index" class="subtitle is-3 has-text-white "> {{skill.title}}</p>
                 <div :key="'d_' + index" class="tags are-medium">
                     <span
                         v-for="(tech, i) in skill.techs"
@@ -103,40 +103,34 @@
                     </span>
                 </div>
             </template>
-            <p class="subtitle is-2">Formação</p>
+            <p class="subtitle has-text-white is-2">Formação</p>
             <p>
                 Bacharel pelo Centro Universitário UDF em Sistemas de Informação no ano de 2012
             </p>
-            <p class="subtitle is-3">Livros</p>
+            <p class="subtitle  has-text-white is-3">Livros</p>
             <p>
                 O Programador Pragmático, Php e Mysql - Desenvolvimento Web - 3ª Edição, Aprendendo Padrões de Projeto em PHP,Web Services em PHP, Zend Framework Componentes Poderosos para PHP, Joomla! Guia do Operador, Contruindo Sites com Css e (X)Html, JQuery em Ação, Html5 e CSS3, UML na prática do problema ao sistema, Programação Shell Linux e Scrum - Gestão Ágil para projetos de Sucesso, PHP e MVC com CodeIgniter.
             </p>
-            <p class="subtitle is-3">Cursos</p>
+            <p class="subtitle has-text-white is-3">Cursos</p>
             <p>
                 Curso Presencial: na X25 - PHP 5.3 OO – 64 horas
             </p>
             <p>
                 Cursos On-line: Ruby - http://www.codecademy.com
             </p>
-            <footer class="footer">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>Wouerner</strong> Programador
-                        <p>Telefone: <a href="tel:+5561999179736">61-99917-9736</a></p>
-                        <p>E-mail <a href="mailto:wouerner@protonmail.com">wouerner@protonmail..com</a></p>
-                        <p><a href="https://www.linkedin.com/in/wouerner/">Linkedin</a>
-                    </p>
-                </div>
-            </footer>
+            <Footer></Footer>
         </div>
     </section>
   </div>
 </template>
 
 <script>
+import Footer from './Footer'
+
 export default {
   name: 'Curriculum',
-    data() {
+  components: { Footer },
+  data() {
         return {
             isComponentModalActive: false,
             empregos: [
@@ -176,7 +170,6 @@ export default {
                     periodo: '10/05/2016 a Emprego Atual',
                     colors:{
                         color: '',
-                        background: 'has-background-info',
                     }
                 },
             ],
